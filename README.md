@@ -1,4 +1,4 @@
-# CL11 - uP : Conexión a internet con Pico W
+# CL11-uP: Conexión a internet con Pico W >draft<
 
 Forma parte de la serie '**Workshop about Python and micropython with Pico W in CMM Benito**' Martin Madrid
 
