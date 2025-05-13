@@ -40,12 +40,13 @@ Tutoriales para 'Requests'
 
 ### Tabla resumen de programas
 
-| Programa                                               | Lenguaje | Objetivo de Aprendizaje   | Hw adicional   |
-| ------------------------------------------------------ | -------- | ------------------------- | -------------- |
-|                                                        | uPy      |                           |                |
-|                                                        |          |                           |                |
-| R_BHWT_wifi_connect_2_0.py                             |          |                           |                |
-| [R_BHWT_wifi_nastro_1_0.py](R_BHWT_wifi_nastro_1_0.py) | uPy      | Test básico de uso de API | Display SH1106 |
+| Programa                                                         | Lenguaje | Objetivo de Aprendizaje              | Hw adicional   |
+| ---------------------------------------------------------------- | -------- | ------------------------------------ | -------------- |
+| [BMMR_CL19s_wifi_connect_0_1.py](BMMR_CL19s_wifi_connect_0_1.py) | uPy      | NO usar - solo aprendizaje           | no solo PICO W |
+| [BMMR_CL19s_wifi_connect_0_2.py](BMMR_CL19s_wifi_connect_0_2.py) | uPY      | NO usar - solo aprendizaje           | solo PICO W    |
+| [BMMR_CL19s_wifi_connect_1_9.py](BMMR_CL19s_wifi_connect_1_9.py) | uPy      | Versión completa                     | solo PICO W    |
+| [R_BHWT_wifi_connect_2_0.py](R_BHWT_wifi_connect_2_0.py)         | uPY      | Mejora sobre 1.9, añade flash de led | solo Pico W    |
+| [R_BHWT_wifi_nastro_1_0.py](R_BHWT_wifi_nastro_1_0.py)           | uPy      | Test básico de uso de API            | Display SH1106 |
 
 ### Recomendaciones de estudio despues de la clase
 
@@ -77,11 +78,31 @@ Para usar las posibilidades de conexión la red internet de la PICO W necesitamo
 
 ## Conectarse a WIFI : Entender y hacer el Tutorial de Sunfounder
 
-Seguir el [pdf.](./2324_CL19_Wifi.pdf)
+Seguir el [pdf.](./2324_CL19_Wifi.pdf) 
 
-## Usar la conexión de forma muy sencilla
+[BMMR_CL19s_wifi_connect_0_1.py](BMMR_CL19s_wifi_connect_0_1.py)
 
-Vamos a usar la conexión a internet para leer de una web de la NASA el numero y nombres de los astronautas en el espacio.
+[BMMR_CL19s_wifi_connect_0_2.py](BMMR_CL19s_wifi_connect_0_2.py)
+
+[BMMR_CL19s_wifi_connect_1_9.py](BMMR_CL19s_wifi_connect_1_9.py)
+
+### Mejora con Led on board
+
+He hecho una mejora de 1.9 simplemente para añadir que le led de la placa este intermitente en la conexión , y se quede encendido si falla. Esto puede ser útil en los casos de no estar conectado al PC
+
+
+
+[R_BHWT_wifi_connect_2_0.py](R_BHWT_wifi_connect_2_0.py)
+
+
+
+## Usar la conexión : Test básico de uso de API HTTP + Display SH1106
+
+Vamos a usar la conexión a internet para leer de una web de la NASA el numero y nombres de los astronautas en el espacio y mostrarlos en display SH1106
+
+[R_BHWT_wifi_nastro_1_0.py](R_BHWT_wifi_nastro_1_0.py)
+
+
 
 ## Preguntas sobre la Clase 11 - 10 minutos
 
