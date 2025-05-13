@@ -40,12 +40,12 @@ Tutoriales para 'Requests'
 
 ### Tabla resumen de programas
 
-| Programa | Lenguaje | Objetivo de Aprendizaje |
-| -------- | -------- | ----------------------- |
-|          |          |                         |
-|          |          |                         |
-|          |          |                         |
-|          |          |                         |
+| Programa                                               | Lenguaje | Objetivo de Aprendizaje   | Hw adicional   |
+| ------------------------------------------------------ | -------- | ------------------------- | -------------- |
+|                                                        | uPy      |                           |                |
+|                                                        |          |                           |                |
+| R_BHWT_wifi_connect_2_0.py                             |          |                           |                |
+| [R_BHWT_wifi_nastro_1_0.py](R_BHWT_wifi_nastro_1_0.py) | uPy      | Test básico de uso de API | Display SH1106 |
 
 ### Recomendaciones de estudio despues de la clase
 
@@ -79,13 +79,9 @@ Para usar las posibilidades de conexión la red internet de la PICO W necesitamo
 
 Seguir el [pdf.](./2324_CL19_Wifi.pdf)
 
-
-
 ## Usar la conexión de forma muy sencilla
 
 Vamos a usar la conexión a internet para leer de una web de la NASA el numero y nombres de los astronautas en el espacio.
-
-
 
 ## Preguntas sobre la Clase 11 - 10 minutos
 
