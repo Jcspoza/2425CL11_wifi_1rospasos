@@ -1,8 +1,10 @@
-# CL11-uP: Conexión a internet con Pico W >draft<
+# 2526_CL7 (antes 2425CL11) uP: Conexión a internet con Pico W - revisado
 
-Forma parte de la serie '**Workshop about Python and micropython with Pico W in CMM Benito**' Martin Madrid
+Indice evolutivo del las clases del taller + libros y webs de referencia:
 
-## Clase 11 - Indice - 90 minutos
+[GitHub - Jcspoza/2526_PyR_Index: Curso Programación y Robotica 2025 2026 - CMM BML](https://github.com/Jcspoza/2526_PyR_Index)
+
+## Clase 7  (en 2425 Clase 11) - Indice - 90 minutos
 
 - Tutoriales y Programas que vamos a seguir
 
@@ -50,15 +52,43 @@ Tutoriales para 'Requests'
 
 ### Recomendaciones de estudio despues de la clase
 
-Leer 
+Leer el [pdf](./2324_CL19_Wifi.pdf) con la explicación más competa de acceso a internet
 
 ## Introducción
 
-### Pedagógica'
+### Pedagógica
 
 En el curso de 2023- 2024 presente el tema de la conexiona internet en Python y PicoW de forma exhaustiva, y creo que este curso es mejor usar un enfoque mas directo. Asi que usare la CL19 de 2023, que he resumido en este[ pdf.](./2324_CL19_Wifi.pdf)
 
 Lógicamente este enfoque hará facil empezar con proyectos prácticos , pero si los proyectos con complejos de vez en cuando habrá que contar la parte teórica que hemso obviado.
+
+### Desde la práctica (actualizado)
+
+Enseguida los montajes robóticos empiezan a ser "troceados" o dicho más correctamente **distribuidos** tanto física como en su parte de inteligencia. Veamos algunos ejemplos 
+
+<u>Simples :</u>
+
+* Mando a distancia simple:
+  
+  * por infrarrojos (IR) : coche robótico
+  * por Radio(433Mhz) : mando de garaje
+
+* Sensor remoto
+  
+  * Sensor de temperatura y humedad de una estación neteo casera (433Mhz)
+  * Sensor de humedad de suelo
+
+<u>Mas complejos:</u>
+
+- Reloj de deporte : almacenamiento local -> analisis remoto en app ( conexión bluetooth)
+
+- Estación meteorológica profesional (conexión internet)
+
+- Control de dron
+
+- .....
+
+En estos, y otros casos, de robot distribuido complejo la PICO W/2W es un buen microcontrolador par ala parte distribuida
 
 ### Técnica super básica
 
@@ -90,19 +120,13 @@ Seguir el [pdf.](./2324_CL19_Wifi.pdf)
 
 He hecho una mejora de 1.9 simplemente para añadir que le led de la placa este intermitente en la conexión , y se quede encendido si falla. Esto puede ser útil en los casos de no estar conectado al PC
 
-
-
 [R_BHWT_wifi_connect_2_0.py](R_BHWT_wifi_connect_2_0.py)
-
-
 
 ## Usar la conexión : Test básico de uso de API HTTP + Display SH1106
 
 Vamos a usar la conexión a internet para leer de una web de la NASA el numero y nombres de los astronautas en el espacio y mostrarlos en display SH1106
 
 [R_BHWT_wifi_nastro_1_0.py](R_BHWT_wifi_nastro_1_0.py)
-
-
 
 ## Preguntas sobre la Clase 11 - 10 minutos
 
