@@ -88,7 +88,7 @@ Enseguida los montajes robóticos empiezan a ser "troceados" o dicho más correc
 
 - .....
 
-En estos, y otros casos, de robot distribuido complejo la PICO W/2W es un buen microcontrolador par ala parte distribuida
+En estos, y otros casos, de **robot distribuido complejo**, la PICO W/2W es una buena opcion para la parte distribuida / remota, **comunicándose por WIFI** con un ordenador o una app de servidor.
 
 ### Técnica super básica
 
