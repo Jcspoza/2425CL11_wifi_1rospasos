@@ -20,7 +20,7 @@ Indice evolutivo del las clases del taller + libros y webs de referencia:
 
 Los dos mejores tutoriales que he visto sobre conectar el PICO W al wifi son los dos indicados anteriormente, especialmente el de Sunfounder
 
-De Sunfounder
+De Sunfounder ( el tutorial de PICO W y el de PICO 2W son iguales)
 
 [8.1 Access to the Network &mdash; SunFounder Kepler Kit for Raspberry Pi Pico W 1.0 documentation](https://docs.sunfounder.com/projects/kepler-kit/en/latest/pyproject/iotproject/1.access.html)
 
