@@ -42,13 +42,13 @@ Tutoriales para 'Requests'
 
 ### Tabla resumen de programas
 
-| Programa                                                         | Lenguaje | Objetivo de Aprendizaje              | Hw adicional   |
-| ---------------------------------------------------------------- | -------- | ------------------------------------ | -------------- |
-| [BMMR_CL19s_wifi_connect_0_1.py](BMMR_CL19s_wifi_connect_0_1.py) | uPy      | NO usar - solo aprendizaje           | no solo PICO W |
-| [BMMR_CL19s_wifi_connect_0_2.py](BMMR_CL19s_wifi_connect_0_2.py) | uPY      | NO usar - solo aprendizaje           | solo PICO W    |
-| [BMMR_CL19s_wifi_connect_1_9.py](BMMR_CL19s_wifi_connect_1_9.py) | uPy      | Versión completa                     | solo PICO W    |
-| [R_BHWT_wifi_connect_2_0.py](R_BHWT_wifi_connect_2_0.py)         | uPY      | Mejora sobre 1.9, añade flash de led | solo Pico W    |
-| [R_BHWT_wifi_nastro_1_0.py](R_BHWT_wifi_nastro_1_0.py)           | uPy      | Test básico de uso de API            | Display SH1106 |
+| Programa                                                         | Lenguaje | Objetivo de Aprendizaje                    | Hw adicional   |
+| ---------------------------------------------------------------- | -------- | ------------------------------------------ | -------------- |
+| [BMMR_CL19s_wifi_connect_0_1.py](BMMR_CL19s_wifi_connect_0_1.py) | uPy      | NO usar - solo aprendizaje                 | no solo PICO W |
+| [BMMR_CL19s_wifi_connect_0_2.py](BMMR_CL19s_wifi_connect_0_2.py) | uPY      | NO usar - solo aprendizaje                 | solo PICO W    |
+| [BMMR_CL19s_wifi_connect_1_9.py](BMMR_CL19s_wifi_connect_1_9.py) | uPy      | Versión completa                           | solo PICO W    |
+| [R_BHWT_wifi_connect_2_0.py](R_BHWT_wifi_connect_2_0.py)         | uPY      | Mejora sobre 1.9, añade flash de led       | solo Pico W    |
+| [R_BHWT_wifi_nastro_1_1.py](R_BHWT_wifi_nastro_1_1.py)           | uPy      | Test básico de uso de una API de tipo HTTP | Display SH1106 |
 
 ### Recomendaciones de estudio despues de la clase
 
@@ -90,13 +90,13 @@ Enseguida los montajes robóticos empiezan a ser "troceados" o dicho más correc
 
 En estos, y otros casos, de **robot distribuido complejo**, la PICO W/2W es una buena opcion para la parte distribuida / remota, **comunicándose por WIFI** con un ordenador o una app de servidor.
 
-### Técnica super básica
+### Introducción técnica super básica
 
 Para usar las posibilidades de conexión la red internet de la PICO W necesitamos como minimo 2 pasos
 
-1. Capa Transporte : Acceder a la red en modo TCP/IP ==> usamos network.WLAN
+1. Acceder a capa 4- Transporte ( de 7capas del modelo OSI) / o a la capa 3 Transporte del modelo antiguo de una 'pila'  TCP/IP  : Acceder a la red en modo TCP/IP ==> usamos network.WLAN
    
-   El Pico W soporta comunicación wifi a 2.4 Ghz 802.11n. En MicroPython, usaremos una libreria construida 'sobre' un alibreria mas basica llamada [lwip](https://savannah.nongnu.org/projects/lwip/)  que implementa  un TCP/IP stack ( no lo explicare):**es la libreria  [network](https://docs.micropython.org/en/latest/library/network.html#)**
+   El Pico W soporta comunicación wifi a 2.4 Ghz 802.11n. En MicroPython, usaremos una libreria construida 'sobre' una libreria mas basica llamada [lwip](https://savannah.nongnu.org/projects/lwip/)  que implementa  un TCP/IP stack ( no lo explicare): **es la libreria  [network](https://docs.micropython.org/en/latest/library/network.html#)**
 
 2. Capa Aplicación: Usar un programa que maneje algun protocolo de aplicación como HTTP
    
@@ -126,7 +126,39 @@ He hecho una mejora de 1.9 simplemente para añadir que le led de la placa este 
 
 Vamos a usar la conexión a internet para leer de una web de la NASA el numero y nombres de los astronautas en el espacio y mostrarlos en display SH1106
 
-[R_BHWT_wifi_nastro_1_0.py](R_BHWT_wifi_nastro_1_0.py)
+[R_BHWT_wifi_nastro_1_1.py](R_BHWT_wifi_nastro_1_1.py)
+
+1. Primero prueba el programa con Thonny y la Pico W/2W conectada por USB
+
+2. Ejecutar de forma autónoma ( sin PC)
+   
+   1. Carga el programa R_BHWT_wifi_nastro_1_1.py como main.py en la PICO W/2W
+   
+   2. Alimenta la Pico W/2W + el display con un powerbank o con una bateria lipo
+   
+   3. El programa se ejecuta al conectar la alimentación ==> en display muestra la info de internet
+
+### Explicación del programa : R_BHWT_wifi_nastro_1_1.py
+
+Lo explicare paso a paso.....
+
+.
+
+.
+
+Explicación muy simplificada de 
+
+1. Display SH1106 cuadricula y caracteres
+   
+   1.  Breve explicación displays gráficos monocromos y libreria framebuffer
+   
+   2. Añadir dibujo de cuadricula
+
+2. Peticiones API a un servidor por HTTP
+
+3. Tipo de datos JSON devuelto por el servidor
+
+.
 
 ## Preguntas sobre la Clase 11 - 10 minutos
 
