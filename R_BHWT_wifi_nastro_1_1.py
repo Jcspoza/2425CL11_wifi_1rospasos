@@ -24,6 +24,7 @@ from do_connect import *
 import requests
 
 # 0.0 - Constates y varaibles globales
+# para el objeto Display
 WIDTH =128 
 HEIGHT= 64
 FREQ = 400_000   # Try lowering this value in case of "Errno 5"
@@ -56,14 +57,20 @@ display.text(ip, 0, 10, 1)
 display.show()
 
 # 3- Preguntamos a una web sobre los astronautas en el espacio con HTTP
-display.text('Preguntando...', 0, 20, 1)
+display.text('Pregunto...', 0, 20, 1)
 display.show()
 url = "http://api.open-notify.org/astros.json" # Cuantos humanos hay en el espacio ahora?
 endPoint = url
 respuesta = requests.get(endPoint)
-# ATENCION : este es un programa simple y no maneja errores de servidor HTTP,
-# 4- formatamos la respuesta y la mostramos en el display
+# ATENCION : este es un programa simple y no maneja errores de servidor HTTP
+# 4 - Mostramos la respuesta: formatamos y la mostramos en el display
+# 4.1 - primero el status code
+codigoRespuesta = respuesta.status_code
+display.text(str(codigoRespuesta), 100, 20, 1)
+display.show()
+# 4.2 Ahora la respuesta en si
 # la respuesta viene en un formato tipo JSON que convertimos a dicionario Python
+# con el metodo ya incluido en requests 'json'
 display.text(str(respuesta.json()['number']), 0, 30, 1)
 display.text('astronautas', 25, 30, 1) # dejo espacio para 3 digitos
 display.text('1 '+ respuesta.json()['people'][0]['name'], 0, 40, 1)
