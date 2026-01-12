@@ -64,7 +64,7 @@ display.show()
 url = "http://api.open-notify.org/astros.json"
 endPoint = url
 respuesta = requests.get(endPoint)
-# ATENCION : este es un programa simple y no maneja errores de servidor HTTP
+# Este programa SI maneja errores de servidor HTTP de forma simple
 # 4 - Mostramos la respuesta: formatamos y la mostramos en el display
 # 4.1 - primero el status code
 codigoRespuesta = respuesta.status_code
