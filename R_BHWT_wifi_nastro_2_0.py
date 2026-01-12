@@ -6,12 +6,13 @@
 # Fecha JCSP 2023 02 06
 # Licencia : CC BY-NC-SA 4.0
 # 1.0 -> 1.1 visualizacion mejorada
+# 2.0 manejo errores HTTP
 
 from os import uname
 # Informative block - start
 p_keyOhw = "I2C en GPIO 4&5 = SDA0 & SCL0 400khz"
-p_project = "Test de conexion a wifi y hacer un get numero astronautas en espacio"
-p_version = "1.1"
+p_project = "Conexion a wifi, GET numero astronautas + manejo errores HTTP"
+p_version = "2.0"
 p_library = "SH1106  @robert-hh + requests"
 print(f"uPython version: {uname()[3]} ")
 print(f"uC: {uname()[4]} - Key other HW: {p_keyOhw}")
@@ -57,9 +58,10 @@ display.text(ip, 0, 10, 1)
 display.show()
 
 # 3- Preguntamos a una web sobre los astronautas en el espacio con HTTP
-display.text('Pregunto...', 0, 20, 1)
+display.text('GET...', 0, 20, 1)
 display.show()
-url = "http://api.open-notify.org/astros.json" # Cuantos humanos hay en el espacio ahora?
+# url = "http://api.open-notify.org/astros.json" # Cuantos humanos hay en el espacio ahora?
+url = "http://api.open-notify.org/astros.json"
 endPoint = url
 respuesta = requests.get(endPoint)
 # ATENCION : este es un programa simple y no maneja errores de servidor HTTP
@@ -68,12 +70,19 @@ respuesta = requests.get(endPoint)
 codigoRespuesta = respuesta.status_code
 display.text(str(codigoRespuesta), 100, 20, 1)
 display.show()
+
 # 4.2 Ahora la respuesta en si
 # la respuesta viene en un formato tipo JSON que convertimos a dicionario Python
 # con el metodo ya incluido en requests 'json'
 # Para volcar la respuesta hay que conocer su estructura -> ver la ayuda de la API
-display.text(str(respuesta.json()['number']), 0, 30, 1)
-display.text('astronautas', 25, 30, 1) # dejo espacio para 3 digitos
-display.text('1 '+ respuesta.json()['people'][0]['name'], 0, 40, 1)
-display.text('2 '+ respuesta.json()['people'][1]['name'], 0, 50, 1)
-display.show()
+
+if codigoRespuesta == 200:
+    display.text(str(respuesta.json()['number']), 0, 30, 1)
+    display.text('astronautas', 25, 30, 1) # dejo espacio para 3 digitos
+    display.text('1 '+ respuesta.json()['people'][0]['name'], 0, 40, 1)
+    display.text('2 '+ respuesta.json()['people'][1]['name'], 0, 50, 1)
+    display.show()
+else:
+    display.text('Error de HTTP', 0, 30, 1)
+    display.text(respuesta.reason.decode('utf-8'), 0, 40, 1)
+    display.show()

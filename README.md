@@ -34,21 +34,26 @@ Otros de interes
 
 [Conectarse a red WiFi con Raspberry Pi Pico W y MicroPython - Geek Factory](https://www.geekfactory.mx/tutoriales-raspberry-pi-pico/conectarse-a-red-wifi-con-raspberry-pi-pico-w-y-micropython/?srsltid=AfmBOop4xwHdGHCsQWK9-woI5ANhjHY3M7i9FjoTNbjdw4Mw_8TBYFXR)
 
-Tutoriales para 'Requests'
+Tutorial para 'Requests'
 
 [Raspberry Pi Pico W: HTTP GET Requests (MicroPython) | Random Nerd Tutorials](https://randomnerdtutorials.com/raspberry-pi-pico-w-http-requests-micropython/)
+
+Tutorial para tipo de datos JSON devuelto por la mayoría de los servidores
+
+Ver tutorial [Python JSON Data: Una guía con ejemplos](https://www.datacamp.com/es/tutorial/json-data-python)
 
 ----
 
 ### Tabla resumen de programas
 
-| Programa                                                         | Lenguaje | Objetivo de Aprendizaje                    | Hw adicional   |
-| ---------------------------------------------------------------- | -------- | ------------------------------------------ | -------------- |
-| [BMMR_CL19s_wifi_connect_0_1.py](BMMR_CL19s_wifi_connect_0_1.py) | uPy      | NO usar - solo aprendizaje                 | no solo PICO W |
-| [BMMR_CL19s_wifi_connect_0_2.py](BMMR_CL19s_wifi_connect_0_2.py) | uPY      | NO usar - solo aprendizaje                 | solo PICO W    |
-| [BMMR_CL19s_wifi_connect_1_9.py](BMMR_CL19s_wifi_connect_1_9.py) | uPy      | Versión completa                           | solo PICO W    |
-| [R_BHWT_wifi_connect_2_0.py](R_BHWT_wifi_connect_2_0.py)         | uPY      | Mejora sobre 1.9, añade flash de led       | solo Pico W    |
-| [R_BHWT_wifi_nastro_1_1.py](R_BHWT_wifi_nastro_1_1.py)           | uPy      | Test básico de uso de una API de tipo HTTP | Display SH1106 |
+| Programa                                                         | Lenguaje | Objetivo de Aprendizaje                                             | Hw adicional   |
+| ---------------------------------------------------------------- | -------- | ------------------------------------------------------------------- | -------------- |
+| [BMMR_CL19s_wifi_connect_0_1.py](BMMR_CL19s_wifi_connect_0_1.py) | uPy      | NO usar - solo aprendizaje                                          | no solo PICO W |
+| [BMMR_CL19s_wifi_connect_0_2.py](BMMR_CL19s_wifi_connect_0_2.py) | uPY      | NO usar - solo aprendizaje                                          | solo PICO W    |
+| [BMMR_CL19s_wifi_connect_1_9.py](BMMR_CL19s_wifi_connect_1_9.py) | uPy      | Versión completa                                                    | solo PICO W    |
+| [R_BHWT_wifi_connect_2_0.py](R_BHWT_wifi_connect_2_0.py)         | uPY      | Mejora sobre 1.9, añade flash de led                                | solo Pico W    |
+| [R_BHWT_wifi_nastro_1_1.py](R_BHWT_wifi_nastro_1_1.py)           | uPy      | Test básico de uso de una API de tipo HTTP                          | Display SH1106 |
+| [R_BHWT_wifi_nastro_2_0.py](R_BHWT_wifi_nastro_2_0.py)           | uPy      | Test básico de uso de una API de tipo HTTP + gestión  error de HTTP |                |
 
 ### Recomendaciones de estudio despues de la clase
 
@@ -138,27 +143,35 @@ Vamos a usar la conexión a internet para leer de una web de la NASA el numero y
    
    3. El programa se ejecuta al conectar la alimentación ==> en display muestra la info de internet
 
-### Explicación del programa : R_BHWT_wifi_nastro_1_1.py
+### Explicación de los programa : R_BHWT_wifi_nastro_1_1.py y R_BHWT_wifi_nastro_2_0.py
 
-Lo explicare paso a paso.....
+Los programas
 
-.
+- [R_BHWT_wifi_nastro_1_1.py](R_BHWT_wifi_nastro_1_1.py)
 
-.
+- [R_BHWT_wifi_nastro_2_0.py](R_BHWT_wifi_nastro_2_0.py)
+  
+  solo difieren en el tratamiento de errores de HTTP ( parte final) . El programa en versión 2.0 servirá para otros programas donde necesitemos consultar a un servidor por HTTP : GET , y con pocas modificaciones también para subir datos con POST
 
-Explicación muy simplificada de 
+Los explicare paso a paso..... y además explicare de forma breve y simplificada:
 
-1. Display SH1106 cuadricula y caracteres
-   
-   1.  Breve explicación displays gráficos monocromos y libreria framebuffer
-   
-   2. Añadir dibujo de cuadricula
+- Display SH1106 cuadricula y caracteres
+  
+  1.  Breve explicación displays gráficos monocromos y libreria framebuffer
+  
+  2. Añadir dibujo de cuadricula
+  
+  ![](C:\Users\josec\OneDrive\Documentos\GitHub\2425CL11_wifi_1er\cuadricula126x64.jpg)
 
-2. Peticiones API a un servidor por HTTP
+- Peticiones API a un servidor por HTTP
+  
+  Ver tutorial para 'Requests' : [Raspberry Pi Pico W: HTTP GET Requests (MicroPython) | Random Nerd Tutorials](https://randomnerdtutorials.com/raspberry-pi-pico-w-http-requests-micropython/)
 
-3. Tipo de datos JSON devuelto por el servidor
+- Tipo de datos JSON devuelto por el servidor
 
-.
+Ver tutorial [Python JSON Data: Una guía con ejemplos](https://www.datacamp.com/es/tutorial/json-data-python)
+
+---
 
 ## Preguntas sobre la Clase 11 - 10 minutos
 
