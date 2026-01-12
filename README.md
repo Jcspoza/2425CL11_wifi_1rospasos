@@ -161,7 +161,7 @@ Los explicare paso a paso..... y además explicare de forma breve y simplificada
   
   2. Añadir dibujo de cuadricula
   
-  ![](C:\Users\josec\OneDrive\Documentos\GitHub\2425CL11_wifi_1er\cuadricula126x64.jpg)
+  ![](./cuadricula126x64.jpg)
 
 - Peticiones API a un servidor por HTTP
   
