@@ -1,0 +1,1 @@
+secrets = {'ssid': 'CMM_PIAS_Invitados', 'password': 'mayorescentro2022'}
