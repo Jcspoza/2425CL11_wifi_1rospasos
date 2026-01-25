@@ -52,6 +52,7 @@ Ver tutorial [Python JSON Data: Una guía con ejemplos](https://www.datacamp.com
 | [BMMR_CL19s_wifi_connect_0_2.py](BMMR_CL19s_wifi_connect_0_2.py) | uPY      | NO usar - solo aprendizaje                                          | solo PICO W    |
 | [BMMR_CL19s_wifi_connect_1_9.py](BMMR_CL19s_wifi_connect_1_9.py) | uPy      | Versión completa                                                    | solo PICO W    |
 | [R_BHWT_wifi_connect_2_0.py](R_BHWT_wifi_connect_2_0.py)         | uPY      | Mejora sobre 1.9, añade flash de led                                | solo Pico W    |
+|                                                                  |          |                                                                     |                |
 | [R_BHWT_wifi_nastro_1_1.py](R_BHWT_wifi_nastro_1_1.py)           | uPy      | Test básico de uso de una API de tipo HTTP                          | Display SH1106 |
 | [R_BHWT_wifi_nastro_2_0.py](R_BHWT_wifi_nastro_2_0.py)           | uPy      | Test básico de uso de una API de tipo HTTP + gestión  error de HTTP |                |
 
@@ -130,6 +131,51 @@ He hecho una mejora de 1.9 simplemente para añadir que le led de la placa este 
 ## Usar la conexión : Test básico de uso de API HTTP + Display SH1106
 
 Vamos a usar la conexión a internet para leer de una web de la NASA el numero y nombres de los astronautas en el espacio y mostrarlos en display SH1106
+
+### Conexiones
+
+Usaremos uno de los dos buses I2cC el "0"
+
+| Display | Pin lógico PICO | Pin físicoVCC PICO |
+| ------- | --------------- | ------------------ |
+| Vcc     | 3.3 volt out    | pin 36             |
+| GND     | cualquier GND   | cualquier GND      |
+| SDA     | GPIO4 - SDA 0   | pin 6              |
+| SCL     | GPIO5 - SCL 0   | pin 7              |
+
+![](C:\Users\josec\OneDrive\Documentos\GitHub\2425CL11_wifi_1er\pico_sh1106_bb.png)
+
+### Libreria y lección donde se explica el SH1106
+
+[sh1106.py](sh1106.py)
+
+Copia el fichero de la libreria a la PICO en su directorio "/lib" (mejor) o en el raiz "/".
+
+La lección donde se explica el uso del display SH1106 es
+
+### [2425CL10_DisplayGrafSH1106](https://github.com/Jcspoza/2425CL10_DisplayGrafSH1106)
+
+### Test de display
+
+[Rbhwt_sh1106_1_0.py](Rbhwt_sh1106_1_0.py)
+
+El test mostrara en consola
+
+```
+uC: Raspberry Pi Pico W with RP2040 - Key other HW: I2C en GPIO 4&5 = SDA0 & SCL0 400khz
+Program: Test HW basico sh1106: i2c, texto y grafico -1er test - Version: 1.0
+Key Library: SH1106  @robert-hh
+Info del bus i2c:  I2C(0, freq=399361, scl=5, sda=4, timeout=50000)
+Scanning I2C bus.
+1 devices found.
+Decimal address: 60 , Hex address:  0x3c
+```
+
+y en pantalla se vera un mensaje como 
+
+![](C:\Users\josec\OneDrive\Documentos\GitHub\2425CL11_wifi_1er\SH1106_test_pantalla.jpg)
+
+### Programa practico: Numero de astronautas en el espacio
 
 [R_BHWT_wifi_nastro_1_1.py](R_BHWT_wifi_nastro_1_1.py)
 
