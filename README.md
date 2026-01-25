@@ -143,7 +143,7 @@ Usaremos uno de los dos buses I2cC el "0"
 | SDA     | GPIO4 - SDA 0   | pin 6              |
 | SCL     | GPIO5 - SCL 0   | pin 7              |
 
-![](C:\Users\josec\OneDrive\Documentos\GitHub\2425CL11_wifi_1er\pico_sh1106_bb.png)
+![](./pico_sh1106_bb.png)
 
 ### Libreria y lección donde se explica el SH1106
 
@@ -173,7 +173,7 @@ Decimal address: 60 , Hex address:  0x3c
 
 y en pantalla se vera un mensaje como 
 
-![](C:\Users\josec\OneDrive\Documentos\GitHub\2425CL11_wifi_1er\SH1106_test_pantalla.jpg)
+![](./SH1106_test_pantalla.jpg)
 
 ### Programa practico: Numero de astronautas en el espacio
 
