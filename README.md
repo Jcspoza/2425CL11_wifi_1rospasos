@@ -1,4 +1,4 @@
-# 2526_CL7 (antes 2425CL11) uP: Conexión a internet con Pico W - revisado
+# 2526_CL7 (antes 2425CL11) uP: Conexión a internet con Pico W - revisado copia
 
 Indice evolutivo del las clases del taller + libros y webs de referencia:
 
